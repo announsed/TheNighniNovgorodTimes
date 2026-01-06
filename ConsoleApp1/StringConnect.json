@@ -1,0 +1,6 @@
+﻿{
+    "StringConnect": {
+        "SqlServerConnection": "Server=ServerIP;Database=NameDatabase;User Id=User;Password=Password;TrustServerCertificate=True;",
+        "SqliteConnection": "Data Source=../../../LocalDataBase.db"
+    }
+}
