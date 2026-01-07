@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Admins : IId
+    internal class Writer : IId
     {
-        public Admins(uint id, Users? users)
+        public Writer(uint id, User? users, Post? posts)
         {
             Id = id;
             Users = users;
+            Posts = posts;
         }
 
         [Column("ID")]
@@ -21,6 +22,10 @@ namespace ConsoleApp1
 
 
         [Column("Пользователи")]
-        Users? Users { get; set; }
+        User? Users { get; set; }
+
+
+        [Column("Посты")]
+        Post? Posts { get; set; }
     }
 }

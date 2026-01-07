@@ -11,7 +11,7 @@ namespace ConsoleApp1
 
 
     // Класс для получения всяких коллекций
-    internal static class Dictionarys
+    internal static class Dictionaries
     {
 
         // Метод для получения всех элементов

@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Posts : IId
+    internal class Role : IId
     {
-        public Posts(uint id, string valuePost, DateTime dateTime, Roles roles)
+        public Role(uint id, Roles role)
         {
             Id = id;
-            ValuePost = valuePost;
-            this.dateTime = dateTime;
-            Roles = roles;
+            Roles = role;
         }
 
         [Column("ID")]
@@ -22,15 +20,15 @@ namespace ConsoleApp1
         public uint Id { get; }
 
 
-        [Column("Пост", TypeName = "NVARCHAR(100000)")]
-        string ValuePost { get; set; }
-
-
-        [Column("Время Регистрации", TypeName = "DATETIME")]
-        DateTime dateTime = DateTime.Now;
-
-
         [Column("Роль")]
         Roles Roles { get; set; }
+    }
+
+
+    public enum Roles 
+    {
+        Читатель,
+        Писатель,
+        Администратор
     }
 }

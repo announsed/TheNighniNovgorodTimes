@@ -25,12 +25,12 @@ namespace ConsoleApp1
             Database.EnsureCreated();
         }
 
-        public DbSet<Users> Users { get; set; }
-        public DbSet<Readers> Readers { get; set; }
-        public DbSet<Writers> Writers { get; set; }
-        public DbSet<Posts> Posts { get; set; }
-        public DbSet<Roles> Roles { get; set; }
-        public DbSet<Admins> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Reader> Readers { get; set; }
+        public DbSet<Writer> Writers { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

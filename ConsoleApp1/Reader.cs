@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Writers : IId
+    internal class Reader : IId
     {
-        public Writers(uint id, Users? users, Posts? posts)
+        public Reader(uint id, User users, Post? posts)
         {
             Id = id;
             Users = users;
@@ -22,10 +22,10 @@ namespace ConsoleApp1
 
 
         [Column("Пользователи")]
-        Users? Users { get; set; }
+        User Users { get; set; }
 
 
         [Column("Посты")]
-        Posts? Posts { get; set; }
+        Post? Posts { get; }
     }
 }

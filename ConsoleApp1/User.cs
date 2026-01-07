@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Users : IId
+    internal class User : IId
     {
-        public Users(uint id, string userName, string password, Roles? roles)
+        public User(uint id, string userName, string password, Role? roles)
         {
             Id = id;
             UserName = userName;
@@ -34,6 +34,6 @@ namespace ConsoleApp1
 
 
         [Column("Роль")]
-        Roles? Roles { get; set; }
+        Role? Roles { get; set; }
     }
 }
