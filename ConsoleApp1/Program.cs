@@ -14,7 +14,7 @@ List<User> users = new List<User>()
 };
 List<Post> posts = new List<Post>()
 {
-    new Post(1, "Это самый первый пост на платформе", "Тут интро...", DateTime.Now, users[1], roles[0])
+    new Post(1, "Заголовок", "Это самый первый пост на платформе", "Тут интро...", DateTime.Now, users, roles[0])
 };
 List<Reader> readers = new List<Reader>()
 {

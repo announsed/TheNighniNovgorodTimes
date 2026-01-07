@@ -21,7 +21,7 @@ namespace ConsoleApp1
 
 
         [Column("Роль")]
-        Roles Roles { get; set; }
+        public Roles Roles { get; set; }
     }
 
 

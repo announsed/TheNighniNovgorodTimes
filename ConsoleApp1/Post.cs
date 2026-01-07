@@ -9,14 +9,15 @@ namespace ConsoleApp1
 {
     internal class Post : IId
     {
-        public Post(uint id, string content, string intro, DateTime dateTime, User user, Role roles)
+        public Post(uint id, string title, string content, string intro, DateTime dateTime, List<User> autors, Role roles)
         {
             Id = id;
             Content = content;
+            Title = title;
             Intro = intro;
             this.dateTime = dateTime;
             Roles = roles;
-            User = user;
+            Autors = autors;
         }
 
 
@@ -26,26 +27,26 @@ namespace ConsoleApp1
 
 
         [Column("Заголовок Поста", TypeName = "NVARCHAR(50)")]
-        string Title { get; set; }
+        public string Title { get; set; }
 
 
         [Column("Заголовок Поста", TypeName = "NVARCHAR(100)")]
-        string Intro { get; set; }
+        public string Intro { get; set; }
 
 
         [Column("Пост", TypeName = "NVARCHAR(100000)")]
-        string Content { get; set; }
+        public string Content { get; set; }
 
 
         [Column("Время Создания", TypeName = "DATETIME")]
-        DateTime dateTime = DateTime.Now;
+        public DateTime dateTime = DateTime.Now;
 
 
         [Column("Автор")]
-        User User { get; set; }
+        public List<User> Autors { get; init; }
 
 
         [Column("Роль")]
-        Role Roles { get; set; }
+        public Role Roles { get; set; }
     }
 }

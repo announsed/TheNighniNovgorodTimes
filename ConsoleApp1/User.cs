@@ -25,15 +25,15 @@ namespace ConsoleApp1
 
         [Column("Имя", TypeName = "CHAR(100)")]
         [Required]
-        string UserName { get; set; }
+        public string UserName { get; init; }
 
 
         [Column("Пароль", TypeName = "CHAR(100)")]
         [Required]
-        string Password { get; set; }
+        public string Password { get; set; }
 
 
         [Column("Роль")]
-        Role? Roles { get; set; }
+        public Role? Roles { get; set; }
     }
 }

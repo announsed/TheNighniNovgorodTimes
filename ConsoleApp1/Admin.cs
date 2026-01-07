@@ -21,6 +21,6 @@ namespace ConsoleApp1
 
 
         [Column("Пользователи")]
-        User? Users { get; set; }
+        public User? Users { get; set; }
     }
 }

@@ -22,10 +22,10 @@ namespace ConsoleApp1
 
 
         [Column("Пользователи")]
-        User Users { get; set; }
+        public User Users { get; set; }
 
 
         [Column("Посты")]
-        Post? Posts { get; }
+        public Post? Posts { get; }
     }
 }
