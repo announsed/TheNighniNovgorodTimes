@@ -6,15 +6,15 @@ List<Role> roles = new List<Role>()
 {
     new Role(1, Roles.Писатель)
 };
-List<Post> posts = new List<Post>()
-{
-    new Post(1, "Это самый первый пост на платформе", DateTime.Now, roles[0])
-};
 List<User> users = new List<User>()
 {
     new User(1, "Виктор", "j67o09gw0", roles[0]),
     new User(2, "Андрей", "lewakw0", roles[0]),
     new User(3, "Иван", "numbersone", roles[0])
+};
+List<Post> posts = new List<Post>()
+{
+    new Post(1, "Это самый первый пост на платформе", "Тут интро...", DateTime.Now, users[1], roles[0])
 };
 List<Reader> readers = new List<Reader>()
 {
